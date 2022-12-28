@@ -21,8 +21,7 @@ def get_plot_data(func, n, window_size, degree):
         for time, time_var in ttimes:
             y.append(time)
             err.append(time_var)
-            
-        
+      
         x_app = np.linspace(1, n+1, num = 2*n)
         y_pred = polynomial_approx(degree, x, y, x_app)
         result.append((dim,x, y, err, x_app, y_pred))
